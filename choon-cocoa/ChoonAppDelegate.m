@@ -6,7 +6,11 @@
 //  Copyright (c) 2013 Richo Healey. All rights reserved.
 //
 
+#define WS_HOST @"localhost"
+#define WS_PORT 4949
+
 #import "ChoonAppDelegate.h"
+#import "ChoonSocket.h"
 
 @implementation ChoonAppDelegate
 
@@ -29,6 +33,7 @@
     [statusItem setHighlightMode:YES];
     
     [self initMenu];
+    [self initSocket];
 }
 
 -(void)initMenu{
@@ -36,6 +41,10 @@
                          initWithTitle:@"Quit"
                          action:@selector(terminate:)
                          keyEquivalent:@""]];
+}
+
+-(void)initSocket{
+    ChoonSocket *socket = [[ChoonSocket alloc] init];
 }
 
 @end

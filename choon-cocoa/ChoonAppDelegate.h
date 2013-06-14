@@ -14,6 +14,7 @@
 }
 
 -(void)initMenu;
+-(void)initSocket;
 
 @property (assign) IBOutlet NSWindow *window;
 
