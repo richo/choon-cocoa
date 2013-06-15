@@ -23,7 +23,8 @@
 		7B4FA5A1176B5F390010B712 /* SocketIOPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4FA380176B5F380010B712 /* SocketIOPacket.m */; };
 		7B4FA5A2176B5F390010B712 /* SocketIOTransportWebsocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4FA383176B5F380010B712 /* SocketIOTransportWebsocket.m */; };
 		7B4FA5A3176B5F390010B712 /* SocketIOTransportXHR.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4FA385176B5F380010B712 /* SocketIOTransportXHR.m */; };
-		7B8C9E45176BF9B20072A32C /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8C9E44176BF9B20072A32C /* SocketRocket.framework */; };
+		7B8C9E48176BFBE40072A32C /* SocketRocket.framework in Resources */ = {isa = PBXBuildFile; fileRef = 7B8C9E47176BFBE40072A32C /* SocketRocket.framework */; };
+		7B8C9E49176BFC020072A32C /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8C9E47176BFBE40072A32C /* SocketRocket.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,7 +58,7 @@
 		7B4FA383176B5F380010B712 /* SocketIOTransportWebsocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketIOTransportWebsocket.m; sourceTree = "<group>"; };
 		7B4FA384176B5F380010B712 /* SocketIOTransportXHR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIOTransportXHR.h; sourceTree = "<group>"; };
 		7B4FA385176B5F380010B712 /* SocketIOTransportXHR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketIOTransportXHR.m; sourceTree = "<group>"; };
-		7B8C9E44176BF9B20072A32C /* SocketRocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketRocket.framework; path = System/Library/Frameworks/SocketRocket.framework; sourceTree = SDKROOT; };
+		7B8C9E47176BFBE40072A32C /* SocketRocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SocketRocket.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B8C9E49176BFC020072A32C /* SocketRocket.framework in Frameworks */,
 				7B4FA351176B54570010B712 /* Cocoa.framework in Frameworks */,
-				7B8C9E45176BF9B20072A32C /* SocketRocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,7 +77,7 @@
 		7B4FA344176B54570010B712 = {
 			isa = PBXGroup;
 			children = (
-				7B8C9E44176BF9B20072A32C /* SocketRocket.framework */,
+				7B8C9E47176BFBE40072A32C /* SocketRocket.framework */,
 				7B4FA356176B54570010B712 /* choon-cocoa */,
 				7B4FA34F176B54570010B712 /* Frameworks */,
 				7B4FA34E176B54570010B712 /* Products */,
@@ -210,6 +211,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B8C9E48176BFBE40072A32C /* SocketRocket.framework in Resources */,
 				7B4FA35B176B54570010B712 /* InfoPlist.strings in Resources */,
 				7B4FA361176B54570010B712 /* Credits.rtf in Resources */,
 				7B4FA367176B54570010B712 /* MainMenu.xib in Resources */,
