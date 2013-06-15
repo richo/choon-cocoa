@@ -16,7 +16,8 @@
 }
 
 -(void)connectTo:(NSString *)host port:(NSInteger *)port {
-    [socketIO connectToHost:host onPort:*port];
+    // Shuddup xcode I know what I'm doing.
+    [socketIO connectToHost:host onPort:port];
 }
 
 @end

@@ -45,6 +45,7 @@
 
 -(void)initSocket{
     ChoonSocket *socket = [[ChoonSocket alloc] init];
+    [socket connectTo:WS_HOST port:WS_PORT];
 }
 
 @end
