@@ -16,9 +16,9 @@
 - (id) init;
 - (void) connectTo:(NSString*) host port:(NSInteger*)port;
 
-//- (void) socketIODidConnect:(SocketIO *)socket;
+- (void) socketIODidConnect:(SocketIO *)socket;
 //- (void) socketIODidDisconnect:(SocketIO *)socket disconnectedWithError:(NSError *)error;
-//- (void) socketIO:(SocketIO *)socket didReceiveMessage:(SocketIOPacket *)packet;
+- (void) socketIO:(SocketIO *)socket didReceiveMessage:(SocketIOPacket *)packet;
 //- (void) socketIO:(SocketIO *)socket didReceiveJSON:(SocketIOPacket *)packet;
 //- (void) socketIO:(SocketIO *)socket didReceiveEvent:(SocketIOPacket *)packet;
 //- (void) socketIO:(SocketIO *)socket didSendMessage:(SocketIOPacket *)packet;
