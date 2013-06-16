@@ -60,7 +60,25 @@ CFStringRef noop(void *r) { return NULL; }
         printf("\n Error : Connect Failed: %d \n", errno);
         SOCKERR(1, "Couldn't connect socket");
     }
+    // TODO, get an actual ID from somewhere. Use Pebble ID.. maybe.
+    char *pebble_id = "XXXXXXXXXXXX";
+    register_intent(sockfd, pebble_id);
+}
 
+void r_send(int sock, char *data, int len) {
+    int n = 0, i = 0;
+    while (n < len) {
+        i = send(sock, data, len-n, 0);
+        data += i;
+        n += i;
+    }
+}
+
+void register_intent(int sock, char* id) {
+    static char *reg = "reg ";
+
+    r_send(sock, reg, 4);
+    r_send(sock, id, strlen(id));
 }
 
 -(void)mainloop {
