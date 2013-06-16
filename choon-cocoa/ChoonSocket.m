@@ -13,6 +13,7 @@
 #include <netdb.h>
 #include <resolv.h>
 #include <arpa/inet.h>
+#include <stdlib.h>
 
 // Debug
 
@@ -60,11 +61,33 @@ CFStringRef noop(void *r) { return NULL; }
         printf("\n Error : Connect Failed: %d \n", errno);
         SOCKERR(1, "Couldn't connect socket");
     }
-    // TODO, get an actual ID from somewhere. Use Pebble ID.. maybe.
-    char *pebble_id = "XXXXXXXXXXXX";
+    char *pebble_id = get_pebble_id();
     register_intent(sockfd, pebble_id);
 }
 
+char* get_pebble_id(void) {
+    char *pebble_id = malloc(13), *path, *home_path;
+    FILE *fh;
+    if ((home_path = getenv("HOME")) != NULL)
+        asprintf(&path, "%s/.choon", home_path);
+    else
+        path = ".choon";
+
+    if ((fh = fopen(path, "r")) == NULL) {
+        printf("Couldn't open your .choon, using dummy data");
+        goto error;
+    };
+    if (fread(pebble_id, 12, 1, fh) < 1) {
+        printf("couldn't read your pebble id, using dummy data");
+        goto error;
+    }
+    if (0) {
+    error:
+        strcpy(pebble_id, "XXXXXXXXXXXX");
+    }
+    pebble_id[12] = 0;
+    return pebble_id;
+}
 void r_send(int sock, char *data, int len) {
     int n = 0, i = 0;
     while (n < len) {
