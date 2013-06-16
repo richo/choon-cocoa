@@ -10,11 +10,15 @@
 #import "../socket.IO-objc/SocketIO.h"
 
 @interface ChoonSocket : NSObject <SocketIODelegate> {
-    SocketIO *socketIO;
+    /* SocketIO *socketIO; */
+    CFReadStreamRef readStream;
+    CFWriteStreamRef writeStream;
+    int sockfd;
 }
 
 - (id) init;
-- (void) connectTo:(NSString*) host port:(NSInteger*)port;
+- (void) connectTo:(char*) host port:(int)port;
+- (void) mainloop;
 
 //- (void) socketIODidConnect:(SocketIO *)socket;
 //- (void) socketIODidDisconnect:(SocketIO *)socket disconnectedWithError:(NSError *)error;
