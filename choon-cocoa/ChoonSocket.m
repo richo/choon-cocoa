@@ -75,10 +75,10 @@ void r_send(int sock, char *data, int len) {
 }
 
 void register_intent(int sock, char* id) {
-    static char *reg = "reg ";
+    char reg[16];
+    snprintf(reg, 16, "reg %s", id);
 
-    r_send(sock, reg, 4);
-    r_send(sock, id, strlen(id));
+    r_send(sock, reg, 16);
 }
 
 -(void)mainloop {
