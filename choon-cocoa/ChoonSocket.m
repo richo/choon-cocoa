@@ -64,20 +64,25 @@ CFStringRef noop(void *r) { return NULL; }
 }
 
 -(void)mainloop {
-    char recvBuff[1024];
-    int n = 0;
+    // Bail if we're already holding a lock on this.
 
-    memset(recvBuff, '0',sizeof(recvBuff));
-    while ( (n = read(sockfd, recvBuff, sizeof(recvBuff)-1)) > 0)
+    char recvBuff[1];
+
+    *recvBuff = 0;
+
+    while (read(sockfd, recvBuff, 1) > 0)
     {
-        recvBuff[n] = 0;
-        printf(">>> %s\n", recvBuff);
+        switch(*recvBuff) {
+        case 'n':
+            system("~/.track next");
+            break;
+        case 'p':
+            system("~/.track prev");
+            break;
+        }
     }
 
-    if(n < 0)
-    {
-        printf("\n Read error \n");
-    }
+    // Update Icon, show we're disconnected, unlock another attempt to start this loop etc.
 }
 
 @end
