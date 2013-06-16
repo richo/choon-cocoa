@@ -16,17 +16,6 @@
 		7B4FA364176B54570010B712 /* ChoonAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4FA363176B54570010B712 /* ChoonAppDelegate.m */; };
 		7B4FA367176B54570010B712 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B4FA365176B54570010B712 /* MainMenu.xib */; };
 		7B4FA375176B5C310010B712 /* ChoonSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4FA374176B5C310010B712 /* ChoonSocket.m */; };
-		7B4FA59B176B5F390010B712 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7B4FA377176B5F380010B712 /* .gitignore */; };
-		7B4FA59C176B5F390010B712 /* .gitmodules in Resources */ = {isa = PBXBuildFile; fileRef = 7B4FA378176B5F380010B712 /* .gitmodules */; };
-		7B4FA59D176B5F390010B712 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 7B4FA379176B5F380010B712 /* LICENSE */; };
-		7B4FA59E176B5F390010B712 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7B4FA37A176B5F380010B712 /* README.md */; };
-		7B4FA59F176B5F390010B712 /* SocketIO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4FA37C176B5F380010B712 /* SocketIO.m */; };
-		7B4FA5A0176B5F390010B712 /* SocketIOJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4FA37E176B5F380010B712 /* SocketIOJSONSerialization.m */; };
-		7B4FA5A1176B5F390010B712 /* SocketIOPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4FA380176B5F380010B712 /* SocketIOPacket.m */; };
-		7B4FA5A2176B5F390010B712 /* SocketIOTransportWebsocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4FA383176B5F380010B712 /* SocketIOTransportWebsocket.m */; };
-		7B4FA5A3176B5F390010B712 /* SocketIOTransportXHR.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4FA385176B5F380010B712 /* SocketIOTransportXHR.m */; };
-		7B8C9E48176BFBE40072A32C /* SocketRocket.framework in Resources */ = {isa = PBXBuildFile; fileRef = 7B8C9E47176BFBE40072A32C /* SocketRocket.framework */; };
-		7B8C9E49176BFC020072A32C /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8C9E47176BFBE40072A32C /* SocketRocket.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,21 +37,6 @@
 		7B4FA366176B54570010B712 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		7B4FA373176B5C310010B712 /* ChoonSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoonSocket.h; sourceTree = "<group>"; };
 		7B4FA374176B5C310010B712 /* ChoonSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoonSocket.m; sourceTree = "<group>"; };
-		7B4FA377176B5F380010B712 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		7B4FA378176B5F380010B712 /* .gitmodules */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitmodules; sourceTree = "<group>"; };
-		7B4FA379176B5F380010B712 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		7B4FA37A176B5F380010B712 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		7B4FA37B176B5F380010B712 /* SocketIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIO.h; sourceTree = "<group>"; };
-		7B4FA37C176B5F380010B712 /* SocketIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketIO.m; sourceTree = "<group>"; };
-		7B4FA37D176B5F380010B712 /* SocketIOJSONSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIOJSONSerialization.h; sourceTree = "<group>"; };
-		7B4FA37E176B5F380010B712 /* SocketIOJSONSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketIOJSONSerialization.m; sourceTree = "<group>"; };
-		7B4FA37F176B5F380010B712 /* SocketIOPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIOPacket.h; sourceTree = "<group>"; };
-		7B4FA380176B5F380010B712 /* SocketIOPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketIOPacket.m; sourceTree = "<group>"; };
-		7B4FA381176B5F380010B712 /* SocketIOTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIOTransport.h; sourceTree = "<group>"; };
-		7B4FA382176B5F380010B712 /* SocketIOTransportWebsocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIOTransportWebsocket.h; sourceTree = "<group>"; };
-		7B4FA383176B5F380010B712 /* SocketIOTransportWebsocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketIOTransportWebsocket.m; sourceTree = "<group>"; };
-		7B4FA384176B5F380010B712 /* SocketIOTransportXHR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketIOTransportXHR.h; sourceTree = "<group>"; };
-		7B4FA385176B5F380010B712 /* SocketIOTransportXHR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketIOTransportXHR.m; sourceTree = "<group>"; };
 		7B8C9E47176BFBE40072A32C /* SocketRocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SocketRocket.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,7 +46,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B4E697A176E248B00CD6910 /* ScriptingBridge.framework in Frameworks */,
-				7B8C9E49176BFC020072A32C /* SocketRocket.framework in Frameworks */,
 				7B4FA351176B54570010B712 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -125,7 +98,6 @@
 				7B4E6977176E235200CD6910 /* ChoonMusicProxy.m */,
 				7B4FA362176B54570010B712 /* ChoonAppDelegate.h */,
 				7B4FA363176B54570010B712 /* ChoonAppDelegate.m */,
-				7B4FA376176B5F380010B712 /* socket.IO-objc */,
 				7B4FA365176B54570010B712 /* MainMenu.xib */,
 				7B4FA357176B54570010B712 /* Supporting Files */,
 				7B4FA373176B5C310010B712 /* ChoonSocket.h */,
@@ -145,28 +117,6 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
-		};
-		7B4FA376176B5F380010B712 /* socket.IO-objc */ = {
-			isa = PBXGroup;
-			children = (
-				7B4FA377176B5F380010B712 /* .gitignore */,
-				7B4FA378176B5F380010B712 /* .gitmodules */,
-				7B4FA379176B5F380010B712 /* LICENSE */,
-				7B4FA37A176B5F380010B712 /* README.md */,
-				7B4FA37B176B5F380010B712 /* SocketIO.h */,
-				7B4FA37C176B5F380010B712 /* SocketIO.m */,
-				7B4FA37D176B5F380010B712 /* SocketIOJSONSerialization.h */,
-				7B4FA37E176B5F380010B712 /* SocketIOJSONSerialization.m */,
-				7B4FA37F176B5F380010B712 /* SocketIOPacket.h */,
-				7B4FA380176B5F380010B712 /* SocketIOPacket.m */,
-				7B4FA381176B5F380010B712 /* SocketIOTransport.h */,
-				7B4FA382176B5F380010B712 /* SocketIOTransportWebsocket.h */,
-				7B4FA383176B5F380010B712 /* SocketIOTransportWebsocket.m */,
-				7B4FA384176B5F380010B712 /* SocketIOTransportXHR.h */,
-				7B4FA385176B5F380010B712 /* SocketIOTransportXHR.m */,
-			);
-			path = "socket.IO-objc";
-			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -220,14 +170,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B8C9E48176BFBE40072A32C /* SocketRocket.framework in Resources */,
 				7B4FA35B176B54570010B712 /* InfoPlist.strings in Resources */,
 				7B4FA361176B54570010B712 /* Credits.rtf in Resources */,
 				7B4FA367176B54570010B712 /* MainMenu.xib in Resources */,
-				7B4FA59B176B5F390010B712 /* .gitignore in Resources */,
-				7B4FA59C176B5F390010B712 /* .gitmodules in Resources */,
-				7B4FA59D176B5F390010B712 /* LICENSE in Resources */,
-				7B4FA59E176B5F390010B712 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,11 +186,6 @@
 				7B4FA35D176B54570010B712 /* main.m in Sources */,
 				7B4FA364176B54570010B712 /* ChoonAppDelegate.m in Sources */,
 				7B4FA375176B5C310010B712 /* ChoonSocket.m in Sources */,
-				7B4FA59F176B5F390010B712 /* SocketIO.m in Sources */,
-				7B4FA5A0176B5F390010B712 /* SocketIOJSONSerialization.m in Sources */,
-				7B4FA5A1176B5F390010B712 /* SocketIOPacket.m in Sources */,
-				7B4FA5A2176B5F390010B712 /* SocketIOTransportWebsocket.m in Sources */,
-				7B4FA5A3176B5F390010B712 /* SocketIOTransportXHR.m in Sources */,
 				7B4E6978176E235200CD6910 /* ChoonMusicProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
