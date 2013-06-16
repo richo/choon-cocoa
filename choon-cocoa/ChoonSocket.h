@@ -7,25 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "../socket.IO-objc/SocketIO.h"
 
-@interface ChoonSocket : NSObject <SocketIODelegate> {
-    /* SocketIO *socketIO; */
-    CFReadStreamRef readStream;
-    CFWriteStreamRef writeStream;
+@interface ChoonSocket : NSObject {
     int sockfd;
 }
 
 - (id) init;
 - (void) connectTo:(char*) host port:(int)port;
 - (void) mainloop;
-
-//- (void) socketIODidConnect:(SocketIO *)socket;
-//- (void) socketIODidDisconnect:(SocketIO *)socket disconnectedWithError:(NSError *)error;
-//- (void) socketIO:(SocketIO *)socket didReceiveMessage:(SocketIOPacket *)packet;
-//- (void) socketIO:(SocketIO *)socket didReceiveJSON:(SocketIOPacket *)packet;
-//- (void) socketIO:(SocketIO *)socket didReceiveEvent:(SocketIOPacket *)packet;
-//- (void) socketIO:(SocketIO *)socket didSendMessage:(SocketIOPacket *)packet;
-//- (void) socketIO:(SocketIO *)socket onError:(NSError *)error;
 
 @end
