@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ChoonMusicProxy.h"
 
 @interface ChoonSocket : NSObject {
     int sockfd;
+    ChoonMusicProxy* music;
 }
 
 - (id) init;

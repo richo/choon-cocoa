@@ -27,6 +27,7 @@
 #define BUFSIZE 1024
 
 -(id)init {
+    music = [[ChoonMusicProxy alloc] init];
     return self;
 }
 
@@ -115,10 +116,10 @@ void register_intent(int sock, char* id) {
     {
         switch(*recvBuff) {
         case 'n':
-            system("~/.track next");
+            [music next];
             break;
         case 'p':
-            system("~/.track prev");
+            [music prev];
             break;
         }
     }
