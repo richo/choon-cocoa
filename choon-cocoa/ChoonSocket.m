@@ -75,8 +75,8 @@ void r_send(int sock, char *data, int len) {
 }
 
 void register_intent(int sock, char* id) {
-    char reg[16];
-    snprintf(reg, 16, "reg %s", id);
+    char reg[17];
+    snprintf(reg, 17, "reg %s", id);
 
     r_send(sock, reg, 16);
 }
