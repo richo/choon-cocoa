@@ -43,7 +43,7 @@
 }
 
 -(void)initSocket{
-    char *host = "localhost";
+    char *host = "app.choon.io";
     int port = 4949;
 
     ChoonSocket *socket = [[ChoonSocket alloc] init];
