@@ -37,7 +37,6 @@
 		7B4FA366176B54570010B712 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		7B4FA373176B5C310010B712 /* ChoonSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoonSocket.h; sourceTree = "<group>"; };
 		7B4FA374176B5C310010B712 /* ChoonSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoonSocket.m; sourceTree = "<group>"; };
-		7B8C9E47176BFBE40072A32C /* SocketRocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SocketRocket.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +56,6 @@
 			isa = PBXGroup;
 			children = (
 				7B4E6979176E248B00CD6910 /* ScriptingBridge.framework */,
-				7B8C9E47176BFBE40072A32C /* SocketRocket.framework */,
 				7B4FA356176B54570010B712 /* choon-cocoa */,
 				7B4FA34F176B54570010B712 /* Frameworks */,
 				7B4FA34E176B54570010B712 /* Products */,
