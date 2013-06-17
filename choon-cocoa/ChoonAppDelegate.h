@@ -20,6 +20,8 @@
 -(void)initNotifier;
 -(void)initSocket;
 
+-(void)toggle_quiet:(NSMenuItem*)sender;
+
 @property (assign) IBOutlet NSWindow *window;
 
 @end

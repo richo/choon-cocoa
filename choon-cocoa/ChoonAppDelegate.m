@@ -38,9 +38,28 @@
 
 -(void)initMenu{
     [statusMenu addItem:[[NSMenuItem alloc]
+                         initWithTitle:@"Quiet"
+                         action:@selector(toggle_quiet:)
+                         keyEquivalent:@""]];
+
+    [statusMenu addItem:[NSMenuItem separatorItem]];
+
+    [statusMenu addItem:[[NSMenuItem alloc]
                          initWithTitle:@"Quit"
                          action:@selector(terminate:)
                          keyEquivalent:@""]];
+}
+
+-(void)toggle_quiet:(NSMenuItem*)sender{
+    if (*_quiet) {
+        NSLog(@"Setting to noisy");
+        [sender setState: NSOffState];
+        *_quiet = FALSE;
+    } else {
+        NSLog(@"Setting to quiet");
+        [sender setState: NSOnState];
+        *_quiet = TRUE;
+    }
 }
 
 -(void)initNotifier{
