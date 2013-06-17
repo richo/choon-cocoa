@@ -32,6 +32,7 @@
     [statusItem setHighlightMode:YES];
 
     [self initMenu];
+    [self initNotifier];
     [self initSocket];
 }
 
@@ -40,6 +41,12 @@
                          initWithTitle:@"Quit"
                          action:@selector(terminate:)
                          keyEquivalent:@""]];
+}
+
+-(void)initNotifier{
+    _quiet = malloc(sizeof(bool));
+    *_quiet = FALSE;
+    notifier = [[ChoonNotificationProxy alloc] init:_quiet];
 }
 
 -(void)initSocket{

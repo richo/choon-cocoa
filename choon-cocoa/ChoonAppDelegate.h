@@ -7,13 +7,17 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ChoonNotificationProxy.h"
 
 @interface ChoonAppDelegate : NSObject <NSApplicationDelegate> {
     IBOutlet NSMenu *statusMenu;
     NSStatusItem * statusItem;
+    ChoonNotificationProxy *notifier;
+    bool* _quiet;
 }
 
 -(void)initMenu;
+-(void)initNotifier;
 -(void)initSocket;
 
 @property (assign) IBOutlet NSWindow *window;

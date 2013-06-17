@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7B4E6978176E235200CD6910 /* ChoonMusicProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4E6977176E235200CD6910 /* ChoonMusicProxy.m */; };
 		7B4E697A176E248B00CD6910 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4E6979176E248B00CD6910 /* ScriptingBridge.framework */; };
+		7B4E697D176EF88700CD6910 /* ChoonNotificationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4E697C176EF88700CD6910 /* ChoonNotificationProxy.m */; };
 		7B4FA351176B54570010B712 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4FA350176B54570010B712 /* Cocoa.framework */; };
 		7B4FA35B176B54570010B712 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B4FA359176B54570010B712 /* InfoPlist.strings */; };
 		7B4FA35D176B54570010B712 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4FA35C176B54570010B712 /* main.m */; };
@@ -22,6 +23,8 @@
 		7B4E6976176E235200CD6910 /* ChoonMusicProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoonMusicProxy.h; sourceTree = "<group>"; };
 		7B4E6977176E235200CD6910 /* ChoonMusicProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoonMusicProxy.m; sourceTree = "<group>"; };
 		7B4E6979176E248B00CD6910 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
+		7B4E697B176EF88700CD6910 /* ChoonNotificationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChoonNotificationProxy.h; sourceTree = "<group>"; };
+		7B4E697C176EF88700CD6910 /* ChoonNotificationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChoonNotificationProxy.m; sourceTree = "<group>"; };
 		7B4FA34D176B54570010B712 /* choon-cocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "choon-cocoa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B4FA350176B54570010B712 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		7B4FA353176B54570010B712 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -100,6 +103,8 @@
 				7B4FA357176B54570010B712 /* Supporting Files */,
 				7B4FA373176B5C310010B712 /* ChoonSocket.h */,
 				7B4FA374176B5C310010B712 /* ChoonSocket.m */,
+				7B4E697B176EF88700CD6910 /* ChoonNotificationProxy.h */,
+				7B4E697C176EF88700CD6910 /* ChoonNotificationProxy.m */,
 			);
 			path = "choon-cocoa";
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 				7B4FA364176B54570010B712 /* ChoonAppDelegate.m in Sources */,
 				7B4FA375176B5C310010B712 /* ChoonSocket.m in Sources */,
 				7B4E6978176E235200CD6910 /* ChoonMusicProxy.m in Sources */,
+				7B4E697D176EF88700CD6910 /* ChoonNotificationProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
