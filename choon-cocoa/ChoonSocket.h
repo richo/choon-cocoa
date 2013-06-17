@@ -15,7 +15,7 @@
 }
 
 - (id) init;
-- (void) connectTo:(char*) host port:(int)port;
+- (void) connectTo:(char*) host port:(int)port main:(bool)main;
 - (void) mainloop;
 
 @end

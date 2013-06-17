@@ -57,8 +57,7 @@
     NSLog(@"Dispatching the network thread");
     dispatch_async(dispatch_get_global_queue(0,0), ^{
         // Call into our sync network handler
-        [socket connectTo:host port:port];
-        [socket mainloop];
+        [socket connectTo:host port:port main:TRUE];
     });
 }
 

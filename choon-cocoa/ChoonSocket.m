@@ -14,17 +14,30 @@
 #include <resolv.h>
 #include <arpa/inet.h>
 #include <stdlib.h>
+#include <setjmp.h>
+#include <unistd.h>
+
 
 // Debug
 
 #include <errno.h>
 
 // TODO
-#define SOCKERR(n, msg) exit(1);
+#define SOCKERR(n, msg) \
+    do { \
+        if((main) && (*buf != NULL)) {\
+            sleep(5);\
+            longjmp(*buf, n);\
+        } else {\
+            exit(n);\
+        }\
+    } while(0);
+
 
 @implementation ChoonSocket
 
 #define BUFSIZE 1024
+static jmp_buf *buf = NULL;
 
 -(id)init {
     music = [[ChoonMusicProxy alloc] init];
@@ -33,11 +46,15 @@
 
 CFStringRef noop(void *r) { return NULL; }
 
--(void)connectTo:(char*) host port:(int)port {
+-(void)connectTo:(char*) host port:(int)port main:(bool)main {
     struct sockaddr_in serv_addr;
     struct hostent *addr;
     char *pebble_id = get_pebble_id();
 
+    if (main) {
+        buf = malloc(sizeof(jmp_buf));
+        setjmp(*buf);
+    }
     NSLog(@"Looking up %s", host);
 
     if ((addr = gethostbyname(host)) == NULL) {
@@ -64,6 +81,8 @@ CFStringRef noop(void *r) { return NULL; }
         SOCKERR(1, "Couldn't connect socket");
     }
     register_intent(sockfd, pebble_id);
+    if (main)
+        [self mainloop];
 }
 
 char* get_pebble_id(void) {
@@ -131,7 +150,8 @@ void register_intent(int sock, char* id) {
         }
     }
     NSLog(@"Disconnected from server");
-    goto connect;
+    if (buf != NULL)
+        longjmp(*buf, 0);
 
     // Update Icon, show we're disconnected, unlock another attempt to start this loop etc.
 }
