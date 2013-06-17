@@ -53,7 +53,7 @@
     char *host = "app.choon.io";
     int port = 4949;
 
-    ChoonSocket *socket = [[ChoonSocket alloc] init];
+    ChoonSocket *socket = [[ChoonSocket alloc] init:notifier];
     NSLog(@"Dispatching the network thread");
     dispatch_async(dispatch_get_global_queue(0,0), ^{
         // Call into our sync network handler

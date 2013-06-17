@@ -8,13 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "ChoonMusicProxy.h"
+#import "ChoonNotificationProxy.h"
+
 
 @interface ChoonSocket : NSObject {
     int sockfd;
     ChoonMusicProxy* music;
+    ChoonNotificationProxy* notifier;
 }
 
-- (id) init;
+- (id) init:(ChoonNotificationProxy*)_notifier;
 - (void) connectTo:(char*) host port:(int)port main:(bool)main;
 - (void) mainloop;
 

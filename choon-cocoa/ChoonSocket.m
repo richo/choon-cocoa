@@ -39,8 +39,9 @@
 #define BUFSIZE 1024
 static jmp_buf *buf = NULL;
 
--(id)init {
+-(id)init:(ChoonNotificationProxy*)_notifier{
     music = [[ChoonMusicProxy alloc] init];
+    notifier = _notifier;
     return self;
 }
 
@@ -53,7 +54,9 @@ CFStringRef noop(void *r) { return NULL; }
 
     if (main) {
         buf = malloc(sizeof(jmp_buf));
-        setjmp(*buf);
+        if (setjmp(*buf) > 0)
+            // We've been here before
+            [notifier deliver:@"Attempting to reconnect" withBody:[NSString stringWithFormat:@"%s", host]];
     }
     NSLog(@"Looking up %s", host);
 
@@ -81,6 +84,7 @@ CFStringRef noop(void *r) { return NULL; }
         SOCKERR(1, "Couldn't connect socket");
     }
     register_intent(sockfd, pebble_id);
+    [notifier deliver:@"Successfully connected" withBody:[NSString stringWithFormat:@"%s", host]];
     if (main)
         [self mainloop];
 }
@@ -151,7 +155,7 @@ void register_intent(int sock, char* id) {
     }
     NSLog(@"Disconnected from server");
     if (buf != NULL)
-        longjmp(*buf, 0);
+        longjmp(*buf, 1);
 
     // Update Icon, show we're disconnected, unlock another attempt to start this loop etc.
 }
