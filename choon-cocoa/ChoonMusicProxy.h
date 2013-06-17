@@ -17,5 +17,6 @@
 
 -(void) next;
 -(void) prev;
+-(void) toggle_play;
 
 @end

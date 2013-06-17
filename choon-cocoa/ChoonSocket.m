@@ -124,6 +124,9 @@ void register_intent(int sock, char* id) {
         case 'p':
             [music prev];
             break;
+        case 't':
+            [music toggle_play];
+            break;
         }
     }
 

@@ -23,5 +23,9 @@
     [iTunes previousTrack];
 }
 
+-(void) toggle_play {
+    [iTunes playpause];
+}
+
 
 @end
