@@ -82,6 +82,9 @@ char* get_pebble_id(void) {
         printf("couldn't read your pebble id, using dummy data");
         goto error;
     }
+    if(home_path != NULL) {
+        free(path);
+    }
     if (0) {
     error:
         strcpy(pebble_id, "XXXXXXXXXXXX");
