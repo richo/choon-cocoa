@@ -36,6 +36,7 @@ CFStringRef noop(void *r) { return NULL; }
 -(void)connectTo:(char*) host port:(int)port {
     struct sockaddr_in serv_addr;
     struct hostent *addr;
+    char *pebble_id = get_pebble_id();
 
     NSLog(@"Looking up %s", host);
 
@@ -62,7 +63,6 @@ CFStringRef noop(void *r) { return NULL; }
         printf("\n Error : Connect Failed: %d \n", errno);
         SOCKERR(1, "Couldn't connect socket");
     }
-    char *pebble_id = get_pebble_id();
     register_intent(sockfd, pebble_id);
 }
 
@@ -110,8 +110,9 @@ void register_intent(int sock, char* id) {
 
 -(void)mainloop {
     // Bail if we're already holding a lock on this.
-
     char recvBuff[1];
+
+    NSLog(@"Connecting");
 
     *recvBuff = 0;
 
@@ -129,6 +130,8 @@ void register_intent(int sock, char* id) {
             break;
         }
     }
+    NSLog(@"Disconnected from server");
+    goto connect;
 
     // Update Icon, show we're disconnected, unlock another attempt to start this loop etc.
 }
