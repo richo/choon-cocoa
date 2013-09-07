@@ -12,19 +12,32 @@
 
 -(id) init {
     iTunes = [SBApplication applicationWithBundleIdentifier:@"com.apple.iTunes"];
+    Spotify = [SBApplication applicationWithBundleIdentifier:@"com.spotify.client"];
+    current = Spotify;
     return self;
 }
 
+-(void) setCurrent:(PROXY_TYPE)client {
+    switch(client) {
+        case PROXY_ITUNES:
+            current = iTunes;
+            break;
+        case PROXY_SPOTIFY:
+            current = Spotify;
+            break;
+    }
+}
+
 -(void) next {
-    [iTunes nextTrack];
+    [current nextTrack];
 }
 
 -(void) prev {
-    [iTunes previousTrack];
+    [current previousTrack];
 }
 
 -(void) toggle_play {
-    [iTunes playpause];
+    [current playpause];
 }
 
 
