@@ -13,7 +13,7 @@
 -(id) init {
     iTunes = [SBApplication applicationWithBundleIdentifier:@"com.apple.iTunes"];
     Spotify = [SBApplication applicationWithBundleIdentifier:@"com.spotify.client"];
-    current = Spotify;
+    current = iTunes;
     return self;
 }
 
