@@ -17,7 +17,7 @@
     ChoonNotificationProxy* notifier;
 }
 
-- (id) init:(ChoonNotificationProxy*)_notifier;
+- (id) init:(ChoonNotificationProxy*)_notifier proxy:(ChoonMusicProxy*)proxy;
 - (void) connectTo:(char*) host port:(int)port main:(bool)main;
 - (void) mainloop;
 

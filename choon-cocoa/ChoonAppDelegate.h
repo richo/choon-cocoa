@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "ChoonSocket.h"
 #import "ChoonNotificationProxy.h"
 
 @interface ChoonAppDelegate : NSObject <NSApplicationDelegate> {
@@ -14,6 +15,8 @@
     NSStatusItem * statusItem;
     ChoonNotificationProxy *notifier;
     bool* _quiet;
+    NSArray *outputs;
+    ChoonMusicProxy *music;
 }
 
 -(void)initMenu;

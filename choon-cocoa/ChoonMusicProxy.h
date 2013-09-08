@@ -11,7 +11,7 @@
 #import "Spotify.h"
 
 typedef enum {
-    PROXY_ITUNES,
+    PROXY_ITUNES = 0,
     PROXY_SPOTIFY
 } PROXY_TYPE;
 

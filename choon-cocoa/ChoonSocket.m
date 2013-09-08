@@ -39,8 +39,8 @@
 #define BUFSIZE 1024
 static jmp_buf *buf = NULL;
 
--(id)init:(ChoonNotificationProxy*)_notifier{
-    music = [[ChoonMusicProxy alloc] init];
+-(id)init:(ChoonNotificationProxy*)_notifier proxy:(ChoonMusicProxy*)proxy{
+    music = proxy;
     notifier = _notifier;
     return self;
 }
