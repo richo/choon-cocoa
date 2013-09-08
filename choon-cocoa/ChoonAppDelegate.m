@@ -85,12 +85,14 @@
 }
 
 -(void)set_spotify:(NSMenuItem*)sender{
+    NSLog(@"Directing output to spotify");
     [self clear_checks];
     [sender setState: NSOnState];
     [music setCurrent:PROXY_SPOTIFY];
 }
 
 -(void)set_itunes:(NSMenuItem*)sender{
+    NSLog(@"Directing output to iTunes");
     [self clear_checks];
     [sender setState: NSOnState];
     [music setCurrent:PROXY_ITUNES];
