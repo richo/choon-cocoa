@@ -33,6 +33,7 @@
     music = [[ChoonMusicProxy alloc] init];
 
     [self initMenu];
+    [[outputs objectAtIndex:PROXY_ITUNES] setState: NSOnState];
     [self initNotifier];
     [self initSocket];
 }
@@ -47,14 +48,14 @@
 
     outputs = [[NSMutableArray alloc] initWithArray:@[
             [[NSMenuItem alloc]
-            initWithTitle:@"Spotify"
-                   action:@selector(set_spotify:)
-            keyEquivalent:@""]
-        ,
-            [[NSMenuItem alloc]
                 initWithTitle:@"iTunes"
                        action:@selector(set_itunes:)
                 keyEquivalent:@""]
+        ,
+            [[NSMenuItem alloc]
+            initWithTitle:@"Spotify"
+                   action:@selector(set_spotify:)
+            keyEquivalent:@""]
     ]];
 
     [statusMenu addItem:[NSMenuItem separatorItem]];
